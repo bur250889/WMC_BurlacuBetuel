@@ -1,0 +1,101 @@
+/* Allgemeine Einstellungen */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+    margin: 0;
+}
+
+/* Kopfbereich */
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 20px 0;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Hauptbereich */
+main {
+    display: flex;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Über mich */
+article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #333;
+}
+
+article h3 {
+    color: #555;
+}
+
+/* Liste */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Bild */
+article img {
+    display: block;
+    margin-top: 20px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Hobby-Bereich */
+aside {
+    background-color: #e6e6e6;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    height: fit-content;
+}
+
+aside h2 {
+    color: #333;
+}
+
+/* Für kleinere Bildschirme */
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+}

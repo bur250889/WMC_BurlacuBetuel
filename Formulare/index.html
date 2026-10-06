@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kontaktformular</h1>
+
+    <form>
+        
+        <!-- Texteingabe mit Pflichtfeld und Pattern -->
+        <label for="name">Name:</label>
+        <input 
+            class="fancyText"
+            type="text" 
+            id="name" 
+            name="name"
+            placeholder="Max Mustermann"
+            required
+            pattern="[A-Za-zÄÖÜäöüß ]+"
+        >
+
+        <br><br>
+
+        <!-- Radiobutton -->
+        <p>Geschlecht:</p>
+
+        <input type="radio" id="maennlich" name="geschlecht" value="maennlich" required>
+        <label for="maennlich">Männlich</label>
+
+        <input type="radio" id="weiblich" name="geschlecht" value="weiblich">
+        <label for="weiblich">Weiblich</label>
+
+        <br><br>
+
+        <!-- Checkbox -->
+        <input type="checkbox" id="datenschutz" name="datenschutz" required>
+        <label for="datenschutz">
+            Ich akzeptiere die Datenschutzerklärung.
+        </label>
+
+        <br><br>
+
+        <!-- Dropdown -->
+        <label for="land">Land:</label>
+
+        <select class="fancyText" id="land" name="land" required>
+            <option value="">-- Bitte auswählen --</option>
+            <option value="oesterreich">Österreich</option>
+            <option value="deutschland">Deutschland</option>
+            <option value="schweiz">Schweiz</option>
+            <option value="andere">Andere</option>
+        </select>
+
+        <br><br>
+
+        <!-- Mehrfachauswahl -->
+        <label for="hobbys">Hobbys:</label>
+
+        <select class="fancySelect" id="hobbys" name="hobbys" multiple size="4">
+            <option value="gaming">Gaming</option>
+            <option value="sport">Sport</option>
+            <option value="musik">Musik</option>
+            <option value="motorsport">Motorsport</option>
+            <option value="programmieren">Programmieren</option>
+        </select>
+
+        <br><br>
+
+        <!-- Mehrzeiliges Textfeld -->
+        <label for="nachricht">Nachricht:</label>
+        <br>
+
+        <textarea 
+            class="fancyText" 
+            id="nachricht" 
+            name="nachricht"
+            rows="6"
+            cols="40"
+            placeholder="Schreibe deine Nachricht..."
+            required
+        ></textarea>
+
+        <br><br>
+
+        <!-- Weiteres Eingabefeld: E-Mail -->
+        <label for="email">E-Mail:</label>
+
+        <input 
+            class="fancyText" 
+            type="email" 
+            id="email" 
+            name="email"
+            placeholder="max@example.com"
+            required
+        >
+
+        <br><br>
+
+        <!-- Telefonnummer mit Pattern -->
+        <label for="telefon">Telefonnummer:</label>
+
+        <input 
+            class="fancyText" 
+            type="tel" 
+            id="telefon" 
+            name="telefon"
+            placeholder="+43 660 1234567"
+            pattern="\+?[0-9 ]{8,20}"
+        >
+
+        <br><br>
+
+        <!-- Absenden -->
+        <input type="submit" value="Absenden">
+
+        <!-- Zurücksetzen -->
+        <input type="reset" value="Zurücksetzen">
+
+
+    </form>
+</body>
+</html>
